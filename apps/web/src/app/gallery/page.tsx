@@ -1,10 +1,10 @@
 // TODO: Convert to next/image (Section 4 Lesson 4)
 
 const images = [
-  { src: "https://picsum.photos/800/600?random=1", alt: "Mountain landscape" },
-  { src: "https://picsum.photos/800/600?random=2", alt: "Ocean sunset" },
-  { src: "https://picsum.photos/800/600?random=3", alt: "Forest path" },
-  { src: "https://picsum.photos/800/600?random=4", alt: "City skyline" },
+  { src: 'https://picsum.photos/800/600?random=1', alt: 'Mountain landscape' },
+  { src: 'https://picsum.photos/800/600?random=2', alt: 'Ocean sunset' },
+  { src: 'https://picsum.photos/800/600?random=3', alt: 'Forest path' },
+  { src: 'https://picsum.photos/800/600?random=4', alt: 'City skyline' },
 ];
 
 export default function GalleryPage() {
@@ -14,13 +14,13 @@ export default function GalleryPage() {
 
       <div className="grid grid-cols-2 gap-4">
         {images.map((image, i) => (
-          <div key={i} className="relative aspect-[4/3]">
+          <div className="relative aspect-[4/3]" key={i}>
             {/* TODO: Replace with next/image for optimization */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={image.src}
               alt={image.alt}
               className="h-full w-full rounded-lg object-cover"
+              src={image.src}
             />
           </div>
         ))}

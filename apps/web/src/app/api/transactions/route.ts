@@ -1,5 +1,5 @@
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   // TODO: Add Zod validation (Section 4 Lesson 1)
@@ -18,8 +18,8 @@ export function GET() {
   // Mock transaction list
   return NextResponse.json({
     transactions: [
-      { id: "1", amount: 100, status: "completed" },
-      { id: "2", amount: 250, status: "pending" },
+      { id: '1', amount: 100, status: 'completed' },
+      { id: '2', amount: 250, status: 'pending' },
     ],
   });
 }
