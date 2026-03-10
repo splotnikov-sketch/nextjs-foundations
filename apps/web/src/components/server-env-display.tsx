@@ -1,3 +1,5 @@
+// /apps/web/src/components/server-env-display.tsx
+
 export function ServerEnvDisplay() {
   return (
     <div className="rounded border p-4">
