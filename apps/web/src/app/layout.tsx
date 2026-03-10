@@ -1,4 +1,6 @@
+/** biome-ignore-all lint/security/noDangerouslySetInnerHtml: <explanation> */
 import type { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes'
 
 import './globals.css';
 
@@ -13,8 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="container mx-auto px-4 py-8">
+         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
         {children}
         {/* TODO: Convert to next/script (Section 4 Lesson 3) */}
         <script
@@ -31,6 +34,7 @@ export default function RootLayout({
             `,
           }}
         />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ export function ClientEnvDisplay() {
     <div className="rounded border p-4">
       <h3 className="font-bold">Client Component</h3>
       <p>Public: {process.env.NEXT_PUBLIC_APP_NAME}</p>
-      <p>Server-only: {process.env.INTERNAL_CONFIG || 'undefined'}</p>
+      <p suppressHydrationWarning>Server-only: {process.env.INTERNAL_CONFIG || 'undefined'}</p>
       <button
         className="mt-2 rounded bg-blue-500 px-3 py-1 text-white hover:bg-blue-600"
         onClick={handleClick}
