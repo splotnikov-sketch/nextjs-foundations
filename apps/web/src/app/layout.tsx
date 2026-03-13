@@ -3,9 +3,10 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes'
 
 import './globals.css';
+import { clientEnv } from 'env/client';
 
 export const metadata: Metadata = {
-  title: process.env.NEXT_PUBLIC_APP_NAME || 'Vercel Academy Foundation - Web',
+  title: clientEnv.NEXT_PUBLIC_APP_NAME || 'Vercel Academy Foundation - Web',
   description: 'VAF Web',
 };
 
