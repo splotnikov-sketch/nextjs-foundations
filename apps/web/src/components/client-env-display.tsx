@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { clientEnv } from '@/env/client';
-import { serverEnv } from '@/env/server';
+
 
 export function ClientEnvDisplay() {
   const [clicks, setClicks] = useState(0);
@@ -16,7 +16,7 @@ export function ClientEnvDisplay() {
       <h3 className="font-bold">Client Component</h3>
       <p>Public: {clientEnv.NEXT_PUBLIC_APP_NAME}</p>
       <p suppressHydrationWarning>
-        Server-only: {serverEnv.INTERNAL_CONFIG || 'undefined'}
+        Server-only: {'undefined'}
       </p>
       <button
         className="mt-2 rounded bg-blue-500 px-3 py-1 text-white hover:bg-blue-600"
