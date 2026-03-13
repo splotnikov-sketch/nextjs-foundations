@@ -1,8 +1,15 @@
 // src/instrumentation.ts
 
+import { trace } from '@opentelemetry/api';
+import { registerOTel } from '@vercel/otel';
 import { logger } from 'lib/logger';
-import type { Instrumentation } from 'next/dist/server/instrumentation/types';
-import { trace } from "node_modules/@opentelemetry/api/build/src/trace-api";
+import type { Instrumentation } from 'next';
+
+export function register() {
+  registerOTel({
+    serviceName: 'nextJs-foundations-web',
+  });
+}
 
 export const onRequestError: Instrumentation.onRequestError = (
   err,

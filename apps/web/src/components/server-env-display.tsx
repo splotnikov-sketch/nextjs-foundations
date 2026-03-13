@@ -1,7 +1,7 @@
 // /apps/web/src/components/server-env-display.tsx
 
-import { clientEnv } from 'env/client';
-import { serverEnv } from 'env/server';
+import { clientEnv } from '@/env/client';
+import { serverEnv } from '@/env/server';
 
 export function ServerEnvDisplay() {
   return (

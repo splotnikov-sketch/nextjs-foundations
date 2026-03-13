@@ -1,9 +1,11 @@
+// apps/web/src/app/layout.tsx
+
 /** biome-ignore-all lint/security/noDangerouslySetInnerHtml: <explanation> */
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes'
 
 import './globals.css';
-import { clientEnv } from 'env/client';
+import { clientEnv } from '@/env/client';
 
 export const metadata: Metadata = {
   title: clientEnv.NEXT_PUBLIC_APP_NAME || 'Vercel Academy Foundation - Web',

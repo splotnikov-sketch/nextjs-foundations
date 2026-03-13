@@ -1,4 +1,4 @@
-import { serverEnv } from "env/server";
+import { serverEnv } from "@/env/server";
 import "server-only";
  
 // Simulate a database call that uses server secrets

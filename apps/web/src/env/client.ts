@@ -1,4 +1,4 @@
-// env/client.ts
+// apps/web/env/client.ts
 import { z } from 'zod';
 
 const schema = z.object({
