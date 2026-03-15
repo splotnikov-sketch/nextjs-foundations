@@ -7,8 +7,8 @@ function createLogger() {
       ...(typeof data === 'object' && data !== null ? data : { message: String(data) }),
     });
 
-    const stream = level === 'error' ? process.stderr : process.stdout;
-    stream.write(`${entry}\n`);
+    // biome-ignore lint/suspicious/noConsole: logger is the single approved console wrapper
+    console[level](entry);
   };
 
   return {
