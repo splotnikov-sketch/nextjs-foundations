@@ -1,3 +1,5 @@
+// apps/web/src/proxy.ts
+
 import { type NextRequest, NextResponse } from 'next/server'
  
 export function proxy(request: NextRequest) {

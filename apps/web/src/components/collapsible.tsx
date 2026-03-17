@@ -16,7 +16,7 @@ export function Collapsible({
   return (
     <div className="rounded border">
       <button
-        className="flex w-full items-center justify-between p-4 text-left font-semibold hover:bg-gray-50"
+        className="flex w-full items-center justify-between p-4 text-left font-semibold hover:bg-black/5 dark:hover:bg-white/5"
         onClick={() => setIsOpen(!isOpen)}
         type="button"
       >
